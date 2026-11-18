@@ -28,7 +28,7 @@ jobs:
           java-version: 21
 
       - name: Preparar el SDK de Android
-        uses: android-actions/setup-android@v3
+        run: yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
 
       - name: Instalar dependencias
         run: npm install
